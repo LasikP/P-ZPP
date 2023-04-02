@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LPCJl9wfzmXsmqFXiCCOWKPpXmGquEE/LUBYBwS9jAXQwh0x8Aqyjpi5mV2yABgPtqT/10bBDcVkPuB4b3GWrA==",
+  "dgSpecHash": "ARMEv8zMGXDMbH1w1v2Khk0n8qCI1aJR28WL9EXkia79mtI1oGN0GkEOPa7RMZBDOJs7eewjqI+ztLEWYXfGdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Krzys\\source\\repos\\nartyy\\nartyy\\nartyy.csproj",
+  "projectFilePath": "C:\\Users\\Krzys\\Desktop\\studia_A\\STUDIA\\sem_6\\proj\\Apka\\nartyy\\nartyy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Krzys\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Krzys\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
