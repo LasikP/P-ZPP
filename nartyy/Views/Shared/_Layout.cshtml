@@ -64,15 +64,15 @@
 	<meta property="og:description" content="">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="~/css/font-awesome.min.css">
+  <link rel="stylesheet" href="~/css/animate.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
   
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="~/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/main.css">
 
-  <script src="js/modernizr-2.7.1.js"></script>
+  <script src="~/js/modernizr-2.7.1.js"></script>
   
 </head>
 
@@ -87,7 +87,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo" href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+          <a class="logo" href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
         </div>
         @*<div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -102,10 +102,11 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+            <a href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="#pricing" class="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>
+            <a href="#pricing" class="scroll">Pricing</a>&nbsp; &nbsp;
+            <a href="@Url.Action("LogOn", "Home")">Sign in</a>
           </div>
         </div>
         

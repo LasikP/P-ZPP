@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 using EntityState = System.Data.Entity.EntityState;
 using Microsoft.AspNetCore.Cors;
-
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Authorization;
 
 namespace nartyy.Controllers
 {
@@ -18,25 +19,25 @@ namespace nartyy.Controllers
             _logger = logger;
            
         }
-
+       
         public IActionResult Index()
         {
-            var zm = db.Narty.ToList();
-            var zm1 = db.ButyNarciarskiee.ToList();
-  
-            ViewBag.Narty = zm;
-            ViewBag.Buty = zm1;
-
-
+           
             return View();
        
         }
 
+        public IActionResult LogOn()
+        {
+            ViewData["Layout"] = "_Layout";
+            return View();
+        }
 
-      
-        
+
+
+        [Authorize]
         [HttpPost]
-        [Route("/home/rezerwacja")]
+        [Microsoft.AspNetCore.Mvc.Route("/home/rezerwacja")]
         public ActionResult Rezerwacja(int id, string typSprzetu)
         {
             if (typSprzetu == "narty")

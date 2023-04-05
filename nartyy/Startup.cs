@@ -21,22 +21,16 @@ namespace nartyy
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsPolicy",
-         builder => builder
-       .WithOrigins("http://localhost:5098")
-       .AllowAnyMethod()
-       .AllowAnyHeader()
-       .AllowCredentials());
-            });
+   
 
             // other service configurations
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("CorsPolicy");
+     
+            
+            app.UseStaticFiles();
 
             // other middleware configurations
         }

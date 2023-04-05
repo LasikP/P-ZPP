@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -66,6 +70,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.28.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.28.0, )"
             }
           },
           "imports": [

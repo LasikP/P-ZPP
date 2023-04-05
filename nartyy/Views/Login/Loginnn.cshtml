@@ -1,0 +1,58 @@
+﻿@{
+    Layout = (string) ViewData["Layout"];
+}
+
+@*<div id="print">
+    </div>
+
+<script>
+  let toke = @ViewBag.Token;
+  let zm = document.getElementById("print");
+  zm.innerHTML=toke;
+</script>*@
+
+
+
+<h2>Wybierz sprzęt do wypożyczenia:</h2>
+<br>
+<br>
+
+@{
+    string jwtToken = ViewBag.Token;
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Narty:</h3>
+        <ul>
+            @foreach (var item in ViewBag.Narty)
+            {
+                <li>
+                    @( item.Nazwa)
+
+                    <button type="button" class="btn btn-primary" onclick="addAuthorizationHeader('@jwtToken', '@Url.Action("Rezerwacja", "Home", new { id = item.IDNarty, typSprzetu = "narty" })')">Zarezerwuj</button>
+
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    function addAuthorizationHeader(jwtToken, url) {
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Authorization", "Bearer " + jwtToken);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+
+        xhr.send();
+    }
+</script>
