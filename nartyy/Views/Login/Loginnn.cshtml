@@ -29,7 +29,7 @@
             {
                 <li>
                     @( item.Nazwa)
-
+                      <img src="data:image/svg+xml;base64,@(Convert.ToBase64String(item.Zdjecie))" />
                     <button type="button" class="btn btn-primary" onclick="addAuthorizationHeader('@jwtToken', '@Url.Action("Rezerwacja", "Home", new { id = item.IDNarty, typSprzetu = "narty" })')">Zarezerwuj</button>
 
                 </li>

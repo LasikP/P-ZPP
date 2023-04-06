@@ -19,9 +19,11 @@ namespace nartyy.Models
 
         public DateTime? DataZwrotu { get; set; }
 
-        public IEnumerable<Narty> Sprzet_Narty{ get; set; }
+        public virtual  ICollection<Narty> Sprzet_Narty{ get; set; }
 
-        public IEnumerable<ButyNarciarskie> Sprzet_Buty { get; set; }
+        public virtual ICollection<ButyNarciarskie> Sprzet_Buty { get; set; }
+
+        public virtual ICollection<Client> Clients { get; set; }
     }
 }
 

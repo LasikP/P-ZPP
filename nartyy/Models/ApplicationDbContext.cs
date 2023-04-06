@@ -11,6 +11,9 @@ namespace nartyy.Models
         public System.Data.Entity.DbSet<Narty> Narty { get; set; }
         public System.Data.Entity.DbSet<ButyNarciarskie> ButyNarciarskiee { get; set; }
         public System.Data.Entity.DbSet<Rezerwacja> Rezerwacje { get; set; }
+        public System.Data.Entity.DbSet<Client> Clients { get; set; }
+        public System.Data.Entity.DbSet<Identity> Identity { get; set; }
+
 
         public ApplicationDbContext() : base("DefaultConnection")
         {
@@ -24,6 +27,8 @@ namespace nartyy.Models
             modelBuilder.Entity<Narty>().ToTable("Narty");
             modelBuilder.Entity<ButyNarciarskie>().ToTable("ButyNarciarskie");
             modelBuilder.Entity<Rezerwacja>().ToTable("Rezerwacje");
+            modelBuilder.Entity<Client>().ToTable("Clients");
+            modelBuilder.Entity<Identity>().ToTable("Identity");
         }
     }
 }

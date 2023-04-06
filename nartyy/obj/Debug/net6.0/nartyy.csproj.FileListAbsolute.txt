@@ -195,3 +195,8 @@ C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\n
 C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.genruntimeconfig.cache
 C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\ref\nartyy.dll
 C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.Migrations.some_change.resources
+C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.Migrations.new_1.resources
+C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.Migrations.new_2_.resources
+C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.Migrations.new_3_.resources
+C:\Users\Krzys\Desktop\studia_A\STUDIA\sem_6\proj\Apka\nartyy\obj\Debug\net6.0\nartyy.Migrations.new_4_.resources
