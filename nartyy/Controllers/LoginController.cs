@@ -49,7 +49,26 @@ namespace nartyy.Controllers
             }
         }
 
-   
+
+        [Route("Register")]
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Register(string username, string password, string imie, string nazwisko, string adres)
+        {
+            var userReg = new Client { Username = username, Password = password, Imie = imie, Nazwisko = nazwisko, Adress = adres,Roles="Admin" };
+            db.Clients.Add(userReg);
+         
+                db.SaveChanges();
+            ViewData["Layout"] = "_Layout";
+            return View("~/Views/Home/LogOn.cshtml");
+            
+            //catch
+            //{
+            //    return NotFound("user not found");
+            //}
+        }
+        
+
 
         // To generate token
         private string GenerateToken(UserModel user)
@@ -75,11 +94,13 @@ namespace nartyy.Controllers
         //To authenticate user
         private UserModel Authenticate(UserLogin userLogin)
         {
-            var currentUser = UserConstants.Users.FirstOrDefault(x => x.Username.ToLower() ==
-                userLogin.Username.ToLower() && x.Password == userLogin.Password);
-            if (currentUser != null)
+            //var currentUser = UserConstants.Users.FirstOrDefault(x => x.Username.ToLower() ==
+            //    userLogin.Username.ToLower() && x.Password == userLogin.Password);
+            var currusers = db.Clients.ToList().FirstOrDefault(x=>x.Username.ToLower()==userLogin.Username && x.Password==userLogin.Password);
+            if (currusers != null)
             {
-                return currentUser;
+                var currrr = new UserModel { Username = currusers.Username, Password = currusers.Password, Roles = currusers.Roles };
+                return currrr;
             }
             return null;
         }

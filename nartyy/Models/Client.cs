@@ -6,9 +6,15 @@ namespace nartyy.Models
     {
         [Key]
         public int IDClient { get; set; }
+
+        public string Username { get; set; }
+
+        public string Password { get; set; }
         public string? Imie { get; set; }
         public string? Nazwisko { get; set; }
-        public string? Adres { get; set; }
-        public virtual ICollection<Identity> Identities { get; set; }
+        public string? Adress { get; set; }
+
+        public string Roles { get; set; }
+      
     }
 }

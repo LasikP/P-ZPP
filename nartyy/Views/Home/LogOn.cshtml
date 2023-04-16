@@ -16,3 +16,41 @@
     </div>
     <button type="submit" class="btn btn-primary">Zaloguj</button>
 </form>
+
+<br>
+
+<button id="button_dodaj" class="btn btn-primary">Dodaj Użytkownika</button>
+
+<form id="registerForm" method="POST" action="/Login/Register" style="display: none;">
+    <div class="form-group">
+        <label for="username">Nazwa użytkownika:</label>
+        <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Hasło:</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div>
+        <label for="name"> Imie:</label>
+        <input type="text" class="form-control" id="name" name="imie">
+    </div>
+       <div>
+        <label for="surname"> Nazwisko:</label>
+        <input type="text" class="form-control" id="surname" name="nazwisko">
+    </div>
+        <div>
+        <label for="adres"> Adres:</label>
+        <input type="text" class="form-control" id="adres" name="adres">
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>
+
+<script>
+    const addButton = document.querySelector('#button_dodaj');
+    addButton.addEventListener('click', showForm);
+
+    function showForm() {
+  const form = document.getElementById('registerForm');
+  form.style.display = 'block';
+}
+    </script>
