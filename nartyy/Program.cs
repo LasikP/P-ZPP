@@ -46,14 +46,14 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "rezerwacja",
-    pattern: "Home/Rezerwacja/{id}/{typSprzetu}",
-    defaults: new { controller = "Home", action = "Rezerwacja" }
-);
-
-app.MapControllerRoute(
     name: "Login",
     pattern: "{controller=Login}/{action=Loginnn}/{id?}");
+
+app.MapControllerRoute(
+    name: "Rezerwacja",
+    pattern: "{controller=Home}/{action=Rezerwacja}");
+
+
 
 
 

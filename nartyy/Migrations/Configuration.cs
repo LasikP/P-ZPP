@@ -1,18 +1,15 @@
-﻿using System;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-
-namespace nartyy.Migrations
+﻿namespace nartyy.Migrations
 {
-   
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<nartyy.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "nartyy.Models.ApplicationDbContext";
         }
 
         protected override void Seed(nartyy.Models.ApplicationDbContext context)

@@ -28,16 +28,41 @@
             @foreach (var item in ViewBag.Narty)
             {
                 <li>
-                    @( item.Nazwa)
-                      <img src="data:image/svg+xml;base64,@(Convert.ToBase64String(item.Zdjecie))" />
-                    <button type="button" class="btn btn-primary" onclick="addAuthorizationHeader('@jwtToken', '@Url.Action("Rezerwacja", "Home", new { id = item.IDNarty, typSprzetu = "narty" })')">Zarezerwuj</button>
-
+                    <h4>@(item.Nazwa)</h4>
+                    @if (item.Dostepnosc == false)
+                        {
+                            <h4>Niedostepne</h4>;
+                        }
+                      
+                <img src="data:image/svg+xml;base64,@(Convert.ToBase64String(item.Zdjecie))" />
+                 <input type="date" id="data-rezerwacji" />
+                <input type="date" id="data-zwrotu" />
+                <button type="button" class="btn btn-primary" onclick="addAuthorizationHeader('@jwtToken', '@Url.Action("Rezerwacja", "Home", new { id = item.IDNarty, typSprzetu = "narty", dataRezerwacji = "" , dataZwrotu = "" ,user = ViewBag.User})'.replace('dataRezerwacji=', 'dataRezerwacji=' + document.getElementById('data-rezerwacji').value).replace('dataZwrotu=', 'dataZwrotu=' + document.getElementById('data-zwrotu').value))">Zarezerwuj</button>
                 </li>
             }
         </ul>
     </div>
+     <div class="col-md-6">
+        <h1>BUTYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYj</h1>
+    </div>
 </div>
 
+<br>
+<br>
+
+<h3>TWOJE REZERWACJE</h3>
+
+@{
+    foreach(var item in ViewBag.Lists)
+    {
+             foreach (var it in (item.Sprzet_Narty))
+             {
+                <br>
+                <h4>@it.Nazwa</h4>
+                <br>
+             }
+    }
+}
 
 <script>
     function addAuthorizationHeader(jwtToken, url) {

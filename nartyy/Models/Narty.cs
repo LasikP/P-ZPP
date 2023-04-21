@@ -20,6 +20,10 @@ namespace nartyy.Models
         public decimal? CenaGodzinowa { get; set; }
         public bool? Dostepnosc { get; set; }
         public byte[]? Zdjecie { get; set; }
+
+        [ForeignKey("Rezerwacja")]
+        public int? IDRezerwacji { get; set; }
+        public Rezerwacja Rezerwacja { get; set; }
        
     }
 }

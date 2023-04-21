@@ -15,15 +15,21 @@ namespace nartyy.Models
 
         public string? TypSprzetu { get; set; }
 
+        [Column(TypeName = "datetime2")]
         public DateTime? DataOdbioru { get; set; }
 
+        [Column(TypeName = "datetime2")]
         public DateTime? DataZwrotu { get; set; }
+
+        [ForeignKey("Client")]
+        public int? IDClient { get; set; }
+        public Client Client { get; set; }
 
         public virtual  ICollection<Narty> Sprzet_Narty{ get; set; }
 
         public virtual ICollection<ButyNarciarskie> Sprzet_Buty { get; set; }
 
-        public virtual ICollection<Client> Clients { get; set; }
+        
     }
 }
 

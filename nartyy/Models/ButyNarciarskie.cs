@@ -21,5 +21,9 @@ namespace nartyy.Models
         public bool? Dostepnosc { get; set; }
         public byte[]? Zdjecie { get; set; }
 
+        [ForeignKey("Rezerwacja")]
+        public int? IDRezerwacji { get; set; }
+        public Rezerwacja Rezerwacja { get; set; }
+
     }
 }

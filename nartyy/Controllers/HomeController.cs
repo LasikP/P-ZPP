@@ -5,21 +5,28 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 using EntityState = System.Data.Entity.EntityState;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Components;
+//using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Authorization;
+using System.Text;
+
 
 namespace nartyy.Controllers
 {
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private ApplicationDbContext db = new ApplicationDbContext();
+
+        private Rezerwacja rezerwacja;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-           
+            rezerwacja = new Rezerwacja();
+
         }
-       
+
+     
         public IActionResult Index()
         {
            
@@ -27,6 +34,7 @@ namespace nartyy.Controllers
        
         }
 
+        [Route("LogOn")]
         public IActionResult LogOn()
         {
             ViewData["Layout"] = "_Layout";
@@ -34,36 +42,43 @@ namespace nartyy.Controllers
         }
 
 
-
+        [Route("Rezerwacja")]
         [Authorize]
         [HttpPost]
-        [Microsoft.AspNetCore.Mvc.Route("/home/rezerwacja")]
-        public ActionResult Rezerwacja(int id, string typSprzetu)
+        
+        
+        public IActionResult Rezerwacja(int id, string typSprzetu, DateTime dataRezerwacji, DateTime dataZwrotu, string user)
         {
             if (typSprzetu == "narty")
             {
                 var narty = db.Narty.Find(id);
                 if (narty.Dostepnosc == false)
                 {
-                    ViewBag.ErrorMessage = "Narty niedostępne w wybranym terminie.";
-                    return RedirectToAction("Index");
+                    
+                    return View("~/Views/Login/Loginnn");
                 }
                 else
                 {
                     narty.Dostepnosc = false;
                     db.Entry(narty).State = EntityState.Modified;
 
-                    Rezerwacja rezerwacja = new Rezerwacja();
+                    var usserr = db.Clients.FirstOrDefault(e => e.Username == user);
                     rezerwacja.IDSprzet = id;
                     rezerwacja.TypSprzetu = "narty";
-                   // rezerwacja.DataOdbioru = dataOdbioru;
-                   // rezerwacja.DataZwrotu = dataZwrotu;
-
+                    rezerwacja.DataOdbioru = dataRezerwacji;
+                    rezerwacja.DataZwrotu = dataZwrotu;
+                    rezerwacja.IDClient = usserr.IDClient;
                     db.Rezerwacje.Add(rezerwacja);
+                    narty.IDRezerwacji = rezerwacja.IDSprzet;
                     db.SaveChanges();
 
                     ViewBag.SuccessMessage = "Rezerwacja nart zakończona pomyślnie.";
-                    return RedirectToAction("Index");
+
+
+
+                    
+                    
+                    return View("~/Views/Login/Loginnn");
                 }
             }
             else if (typSprzetu == "buty")
@@ -124,9 +139,6 @@ namespace nartyy.Controllers
                 return RedirectToAction("Index");
             }
         }
-    
-
-
 
 
 

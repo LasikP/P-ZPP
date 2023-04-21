@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace nartyy.Models
 {
@@ -15,6 +16,7 @@ namespace nartyy.Models
         public string? Adress { get; set; }
 
         public string Roles { get; set; }
-      
+
+        public virtual ICollection<Rezerwacja> Rezerwacja { get; set; }
     }
 }

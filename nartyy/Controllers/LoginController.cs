@@ -35,11 +35,25 @@ namespace nartyy.Controllers
                 {
                     var zm = db.Narty.ToList();
                     var zm1 = db.ButyNarciarskiee.ToList();
-
+                    var zm2 = db.Clients.ToList();
+                    var zm3 = db.Rezerwacje.ToList();
                     ViewBag.Narty = zm;
                     ViewBag.Buty = zm1;
+                    ViewBag.Client = zm2;
+                    ViewBag.Rezerw = zm3;
                     ViewBag.Token = token;
+                    ViewBag.User = username;
                     ViewData["Layout"] = "_Layout";
+                    var usserr = db.Clients.FirstOrDefault(e => e.Username == username);
+
+
+                    var lista = db.Rezerwacje.Where(e => e.IDClient == usserr.IDClient).ToList();
+
+                    ViewBag.Lists = lista;
+
+               
+
+
                     return View();
                 }
             }
