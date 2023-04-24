@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using nartyy.Migrations;
 using nartyy.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

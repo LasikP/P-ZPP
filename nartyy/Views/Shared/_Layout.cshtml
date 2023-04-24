@@ -73,7 +73,19 @@
   <link rel="stylesheet" href="~/css/main.css">
 
   <script src="~/js/modernizr-2.7.1.js"></script>
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    button{
+        font-size: 1em;
+        border: none;
+        outline: none;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background-color: black;
+        color: white;
+    }
+</style>
 </head>
 
 <body>
@@ -105,17 +117,35 @@
             <a href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="#pricing" class="scroll">Pricing</a>&nbsp; &nbsp;
-            <a href="@Url.Action("LogOn", "Home")">Sign</a>
-      
-          </div>
+            @*<a href="#pricing" class="scroll">Cennik</a>&nbsp; &nbsp;
+            <a href="@Url.Action("LogOn", "Home")">Zaloguj się</a>*@
+                    @*<button><i class="fa-regular fa-money-bill"></i>Cennik</button>*@
+                    @*<a href="#pricing" class="scroll"><button><i class="fa-regular fa-money-bill"></i>Cennik</button></a>*@
+                    <a href="@Url.Action("Cash", "Home")"><button><i class="fa-regular fa-money-bill"></i>Cennik</button></a>
+
+                    @*<button><i class="fa-regular fa-user"></i> Zaloguj się</button>*@
+                    <a href="@Url.Action("LogOn", "Home")"><button><i class="fa-regular fa-user"></i> Zaloguj się</button></a>
+
+
+                </div>
         </div>
         
         <div class="row header-info">
           <div class="col-sm-10 col-sm-offset-1 text-center">
-            <h1 class="wow fadeIn">WPORZYCZALNIA NART</h1>
+          @*  <h1 class="wow fadeIn">WYPORZYCZALNIA NART</h1>*@
+                    @*<h1 class="wow fadeIn" style="color:white; background-color:black; width: 100%;">WYPORZYCZALNIA NART</h1>*@
+                    @*<h1 class="wow fadeIn" style="color:white; background-color:black; width: 100%; display: inline-block; padding: 10px; border-radius: 10px; border: 2px solid white;">WYPORZYCZALNIA NART</h1>*@
+                    <h1 class="wow fadeIn" style="color:white; background-color:black; display: inline-block; padding: 10px; border-radius: 10px; border: 2px solid black;">WYPOŻYCZALNIA NART</h1>
+
+
+
             <br />
-            <p class="lead wow fadeIn" data-wow-delay="0.5s">MAMAY CAŁY SPRZĘT. <br>
+            @*<p class="lead wow fadeIn" data-wow-delay="0.5s">MAMY CAŁY SPRZĘT. <br>*@
+                   @* <p class="lead wow fadeIn" data-wow-delay="0.5s" style="color:white; background-color:black;">MAMY CAŁY SPRZĘT.<br></p>*@
+                    @*<p class="lead wow fadeIn" data-wow-delay="0.5s" style="background: black; color: white; -webkit-background-clip: text; background-clip: text;">MAMY CAŁY SPRZĘT.</p>*@
+                    <p class="lead wow fadeIn" data-wow-delay="0.5s" style="color: white; background-color: black; display: inline-block; padding: 10px; border-radius: 10px; border: 2px solid black;">MAMY CAŁY SPRZĘT<br></p>
+
+
             </p>
             <br />
               

@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Cors;
 //using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Authorization;
 using System.Text;
-
+using nartyy.Migrations;
 
 namespace nartyy.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -41,6 +41,12 @@ namespace nartyy.Controllers
             return View();
         }
 
+        [Route("Cash")]
+        public IActionResult Cash()
+        {
+            ViewData["Layout"] = "_Layout";
+            return View();
+        }
 
         [Route("Rezerwacja")]
         [Authorize]

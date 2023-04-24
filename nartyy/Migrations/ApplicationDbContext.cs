@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using nartyy.Models;
 using System.Data.Entity;
 
-namespace nartyy.Models
+namespace nartyy.Migrations
 {
-    
+
 
     public class ApplicationDbContext : System.Data.Entity.DbContext
     {
@@ -12,12 +13,12 @@ namespace nartyy.Models
         public System.Data.Entity.DbSet<ButyNarciarskie> ButyNarciarskiee { get; set; }
         public System.Data.Entity.DbSet<Rezerwacja> Rezerwacje { get; set; }
         public System.Data.Entity.DbSet<Client> Clients { get; set; }
-     
+
 
 
         public ApplicationDbContext() : base("DefaultConnection")
         {
-    
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,7 +29,7 @@ namespace nartyy.Models
             modelBuilder.Entity<ButyNarciarskie>().ToTable("ButyNarciarskie");
             modelBuilder.Entity<Rezerwacja>().ToTable("Rezerwacje");
             modelBuilder.Entity<Client>().ToTable("Clients");
- 
+
         }
     }
 }
