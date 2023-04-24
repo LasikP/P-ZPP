@@ -20,11 +20,14 @@ p, .lead {
 }
 
 h1 {
-  font-size: 55px;
-  line-height: 55px;
-  letter-spacing: -1px;
-  color: #ffffff;
-  font-weight: 700;
+    font-size: 55px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    color: #ffffff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 35px;
 }
 
 h2 {
@@ -51,10 +54,13 @@ h3 {
 }
 
 p {
-  font-size: 17px;
-  line-height: 22px;
-  color: #929496;
-  font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: #929496;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /*------------------Utilities---------------------*/
@@ -234,7 +240,7 @@ a:hover, a:focus {
 
 .navbar {
     border: 0px solid rgba(0, 0, 0, 0);
-    background: #70cbce;
+    background: #8334eb;
     margin: auto;
     min-height: 60px;
     padding-top: 8px;
@@ -251,6 +257,8 @@ a:hover, a:focus {
     color: #ffffff;
     font-size: 14px;
     letter-spacing: 1px;
+    padding:20px;
+
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {

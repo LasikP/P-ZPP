@@ -11661,24 +11661,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ghaus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\ss\\nartyy\\nartyy.csproj",
+      "projectUniqueName": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
       "projectName": "nartyy",
-      "projectPath": "C:\\Users\\admin\\Desktop\\ss\\nartyy\\nartyy.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\ss\\nartyy\\obj\\",
+      "projectPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
+      "packagesPath": "C:\\Users\\ghaus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ghaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
