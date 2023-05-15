@@ -47,6 +47,16 @@ namespace nartyy.Controllers
             ViewData["Layout"] = "_Layout";
             return View();
         }
+        public IActionResult Contact()
+        {
+            ViewData["Layout"] = "_Layout";
+            return View();
+        }
+        public IActionResult Company()
+        {
+            ViewData["Layout"] = "_Layout";
+            return View();
+        }
 
         [Route("Rezerwacja")]
         [Authorize]

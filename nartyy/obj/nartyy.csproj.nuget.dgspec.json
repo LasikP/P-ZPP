@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj": {}
+    "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\nartyy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj": {
+    "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\nartyy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
+        "projectUniqueName": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\nartyy.csproj",
         "projectName": "nartyy",
-        "projectPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
+        "projectPath": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\nartyy.csproj",
         "packagesPath": "C:\\Users\\ghaus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\obj\\",
+        "outputPath": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ghaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
