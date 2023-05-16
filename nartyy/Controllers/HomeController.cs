@@ -47,11 +47,13 @@ namespace nartyy.Controllers
             ViewData["Layout"] = "_Layout";
             return View();
         }
+        [Route("Contact")]
         public IActionResult Contact()
         {
             ViewData["Layout"] = "_Layout";
             return View();
         }
+        [Route("Company")]
         public IActionResult Company()
         {
             ViewData["Layout"] = "_Layout";
