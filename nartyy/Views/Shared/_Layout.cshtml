@@ -20,7 +20,29 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
-
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <a href="@Url.Action("Index", "Home")"><img src="img/logo.svg" alt="Logo"></a>
+            </div>
+            <div class="col-xs-6 signin text-right navbar-nav">
+                <div class="col-xs-3">
+                    <a href="@Url.Action("Company")"><button><i class="fa-solid fa-users-between-lines"></i> O nas</button></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="@Url.Action("Cash")"><button><i class="fa-solid fa-money-bill"></i> Cennik</button></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="@Url.Action("Contact")"><button><i class="fa-solid fa-phone"></i> Kontakt</button></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="@Url.Action("LogOn")"><button><i class="fa-regular fa-user"></i> Zaloguj się</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -35,29 +57,7 @@
         </div>
     </div>
 
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6">
-                    <a href="@Url.Action("Index", "Home")"><img src="img/logo.svg" alt="Logo"></a>
-                </div>
-                <div class="col-xs-6 signin text-right navbar-nav">
-                    <div class="col-xs-3">
-                        <a href="@Url.Action("Company", "Home")"><button><i class="fa-solid fa-users-between-lines"></i> O nas</button></a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="@Url.Action("Cash", "Home")"><button><i class="fa-solid fa-money-bill"></i> Cennik</button></a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="@Url.Action("Contact", "Home")"><button><i class="fa-solid fa-phone"></i> Kontakt</button></a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="@Url.Action("LogOn", "Home")"><button><i class="fa-regular fa-user"></i> Zaloguj się</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+
 
     <div class="row header-info">
         <div class="col-sm-10 col-sm-offset-1 text-center">
@@ -68,7 +68,6 @@
         </div>
     </div>
     </div>
-    </header>
 
     <div class="container">
         <main role="main" class="pb-3">
