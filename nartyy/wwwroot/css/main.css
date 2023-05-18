@@ -63,13 +63,17 @@ button {
     color: white;
 }
 .my-form {
-    color: #305896;
+    color: white;
 }
 
     .my-form .btn-default {
         background-color: #9b34eb;
-        color: #9b34eb;
-        border-radius: 0;
+        color: white;
+        border-radius: 20;
+        width: 200px;
+        height:75px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: bold;
     }
 
         .my-form .btn-default:hover {
@@ -80,14 +84,20 @@ button {
     .my-form .form-control {
         border-radius: 0;
     }
+.card{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bold;
+}
+
 
 .card1:hover {
-    background: #00ffb6;
+    background: #ab1f91;
     border: 1px solid #00ffb6;
 }
 
     .card1:hover .list-group-item {
-        background: #00ffb6 !important
+        background: #df03fc !important
     }
 
 
@@ -95,29 +105,25 @@ button {
 
 
 .card2:hover {
-    background: #00C9FF;
+    background: #9d1fab;
     border: 1px solid #00C9FF;
 }
 
     .card2:hover .list-group-item {
-        background: #00C9FF !important
+        background: #fc03e8 !important
     }
 
 
 .card3:hover {
-    background: #ff95e9;
+    background: #7c1fab;
     border: 1px solid #ff95e9;
 }
 
     .card3:hover .list-group-item {
-        background: #ff95e9 !important
+        background: #a903fc !important
     }
 
 
-.card:hover .btn-outline-dark {
-    color: white;
-    background: #212529;
-}
 
 /*------------------Utilities---------------------*/
 a {
@@ -165,6 +171,9 @@ h2 {
 
 .about-section {
     padding: 50px 0;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bold;
 }
 
     .about-section .row {
@@ -180,10 +189,12 @@ h2 {
             font-weight: bold;
             margin-bottom: 20px;
             animation: fadeInLeft 1s;
+            color: white;
         }
 
         .about-section .col-md-6 p {
             animation: fadeInLeft 1s;
+            color:white;
         }
 
         .about-section .col-md-6 ul {

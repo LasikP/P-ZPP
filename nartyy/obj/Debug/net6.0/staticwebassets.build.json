@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UYySbm/mf5eFb+sz8f8GtsU72FkBZafO53Jj6F4GFLc=",
+  "Hash": "BCy7USjcTRnSSxdU139eBxdtflL5MueRrMY62gqT610=",
   "Source": "nartyy",
   "BasePath": "_content/nartyy",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Identity": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\wwwroot\\img\\aboutusphoto.jpg",
+      "SourceId": "nartyy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\wwwroot\\",
+      "BasePath": "_content/nartyy",
+      "RelativePath": "img/aboutusphoto.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\aboutusphoto.jpg"
     },
     {
       "Identity": "C:\\Users\\ghaus\\source\\repos\\P-ZPP\\nartyy\\wwwroot\\img\\be-the-first-bg.jpg",
