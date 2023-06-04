@@ -1,53 +1,4 @@
-﻿@*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - nartyy</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/nartyy.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">nartyy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - nartyy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>*@
-
+﻿
 
     <!DOCTYPE html>
 <html lang="en"><head>
@@ -101,12 +52,6 @@
           </button>
           <a class="logo" href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
         </div>
-        @*<div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#pricing" class="scroll">Pricing</a></li>
-            <li><a href="#">Sign in</a></li>
-          </ul>
-        </div><!--/.navbar-collapse -->*@
       </div>
     </div>
         
@@ -117,188 +62,59 @@
             <a href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
-                    <a href="@Url.Action("", "Home")"><button><i class="fa-solid fa-users-between-lines"></i> O nas</button></a>
-                    <a href="@Url.Action("Cash", "Home")"><button><i class="fa-solid fa-money-bill"></i> Cennik</button></a>
-                    <a href="@Url.Action("", "Home")"><button><i class="fa-solid fa-phone"></i> Kontakt</button></a>
-                    <a href="@Url.Action("LogOn", "Home")"><button><i class="fa-regular fa-user"></i> Zaloguj się</button></a>
-                </div>
+                    <div class="col-xs-8 signin text-right navbar-nav">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <a href="@Url.Action("Company")">
+                                    <button class="btn btn-primary"><i class="fa-solid fa-users-between-lines"></i> O nas</button>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="@Url.Action("Cash")">
+                                    <button class="btn btn-primary"><i class="fa-solid fa-money-bill"></i> Cennik</button>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="@Url.Action("Contact")">
+                                    <button class="btn btn-primary"><i class="fa-solid fa-phone"></i> Kontakt</button>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="@Url.Action("LogOn")">
+                                    <button class="btn btn-primary"><i class="fa-regular fa-user"></i> Zaloguj się</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
         </div>
         
         <div class="row header-info">
           <div class="col-sm-10 col-sm-offset-1 text-center">
-          @*  <h1 class="wow fadeIn">WYPORZYCZALNIA NART</h1>*@
-                    @*<h1 class="wow fadeIn" style="color:white; background-color:black; width: 100%;">WYPORZYCZALNIA NART</h1>*@
-                    @*<h1 class="wow fadeIn" style="color:white; background-color:black; width: 100%; display: inline-block; padding: 10px; border-radius: 10px; border: 2px solid white;">WYPORZYCZALNIA NART</h1>*@
+   
                     <h1 class="wow fadeIn"" style="background-color: #8334eb;">WYPOŻYCZALNIA NART</h1>
 
 
 
             <br />
-            @*<p class="lead wow fadeIn" data-wow-delay="0.5s">MAMY CAŁY SPRZĘT. <br>*@
-                   @* <p class="lead wow fadeIn" data-wow-delay="0.5s" style="color:white; background-color:black;">MAMY CAŁY SPRZĘT.<br></p>*@
-                    @*<p class="lead wow fadeIn" data-wow-delay="0.5s" style="background: black; color: white; -webkit-background-clip: text; background-clip: text;">MAMY CAŁY SPRZĘT.</p>*@
+       
                     <p class="lead wow fadeIn" data-wow-delay="0.5s" style="background-color: #8334eb;">MAMY CAŁY SPRZĘT<br></p>
 
 
             </p>
             <br />
-              
-           @* <div class="row">
-              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                <div class="row">
-                  <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
-                    <a href="#be-the-first" class="btn btn-secondary btn-lg scroll">Learn More</a>
-                  </div>
-                  <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
-                    <a href="#invite" class="btn btn-primary btn-lg scroll">Request Invite</a>
-                  </div>
-                </div><!--End Button Row-->  
-              </div>
-            </div>*@
+
             
           </div>
         </div>
       </div>
     </header>
     
-    @*<div class="mouse-icon hidden-xs">
-				<div class="scroll"></div>
-			</div>
+ 
     
-    <section id="be-the-first" class="pad-xl">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
-            <h2>Be the first</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipis.</p>
-          </div>
-        </div>
-        
-        <div class="iphone wow fadeInUp" data-wow-delay="1s">
-	        <img src="img/iphone.png">
-        </div>
-      </div>
-    </section>
-    
-    <section id="main-info" class="pad-xl">
-	    <div class="container">
-		    <div class="row">
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
-				    <hr class="line purple">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
-				    <hr  class="line blue">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-			    <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
-				    <hr  class="line yellow">
-				    <h3>App Feature One Here</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
-			    </div>
-		    </div>
-	    </div>
-    </section>
-        
-        
-    <!--Pricing-->
-    <section id="pricing" class="pad-lg">
-      <div class="container">
-        <div class="row margin-40">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h2 class="white">Pricing</h2>
-            <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
-          </div>
-        </div>
-        
-        <div class="row margin-50">
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1s">
-            <br />
-            <ul class="list-unstyled pricing-table text-center">
-    					<li class="headline"><h5 class="white">Personal</h5></li>
-    					<li class="price"><div class="amount">$5<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="0.4s">
-            <ul class="list-unstyled pricing-table active text-center">
-    					<li class="headline"><h5 class="white">Professional</h5></li>
-    					<li class="price"><div class="amount">$12<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1.3s">
-            <br />
-            <ul class="list-unstyled pricing-table text-center">
-    					<li class="headline"><h5 class="white">Business</h5></li>
-    					<li class="price"><div class="amount">$24<small>/m</small></div></li>
-    					<li class="info">2 row section for you package information. You can include all details or icons</li>
-    					<li class="features first">Up To 25 Projects</li>
-    					<li class="features">10GB Storage</li>
-    					<li class="features">Other info</li>
-    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
-    				</ul>
-          </div>
-          
-        </div>
-        
-      </div>
-    </section>
-    
-    
-    <section id="invite" class="pad-lg light-gray-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <i class="fa fa-envelope-o margin-40"></i>
-            <h2 class="black">Get the invite</h2>
-            <br />
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
-            <br />
             
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <form role="form">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-lg">Request Invite</button>
-                </form>
-              </div>
-            </div><!--End Form row-->
-
-          </div>
-        </div>
-      </div>
-    </section>
+   
     
-    
-    <section id="press" class="pad-sm">
-      <div class="container">
-        
-        <div class="row margin-30 news-container">
-          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="0.8s">
-            <a href="#" target="_blank">
-            <img class="news-img pull-left" src="img/press-01.jpg" alt="Tech Crunch">
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.<br /> 
-            <small><em>Tech Crunch - January 15, 2015</em></small></p>
-            </a>
-          </div>
-        </div>*@
+ 
        @*////////////////////////////////////////////////////////////////////////////////body*@
           <div class="container">
             <main role="main" class="pb-3">
@@ -306,18 +122,7 @@
             </main>
         </div>
         @*///////////////////////////////////////////////////////////////////////////////////*@
-       @* <div class="row margin-30 news-container">
-          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
-            <a href="#" target="_blank">
-            <img class="news-img pull-left" src="img/press-02.jpg" alt="Forbes">
-            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut. <br /> 
-            <small><em>Forbes - Feb 25, 2015</em></small></p>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-    </section>*@
+       
     
     
     <footer>

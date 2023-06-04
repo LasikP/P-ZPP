@@ -9,12 +9,12 @@ namespace nartyy.Controllers
     [ApiController]
     public class UserController : Controller
     {
-        
-        
+
+
         //For admin Only
         [HttpGet]
         [Route("/user/Adminn")]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         //[AllowAnonymous]
         public IActionResult Adminn()
         {

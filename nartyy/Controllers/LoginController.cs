@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -16,51 +17,70 @@ namespace nartyy.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         private readonly IConfiguration _config;
+        private string tokenn;
+        private string userrr;
+
         public LoginController(IConfiguration config)
         {
             _config = config;
+
         }
 
-      
+     
+
+
         [Route("Loginnn")]
         [AllowAnonymous]
         [HttpPost]
         public IActionResult Loginnn(string username, string password)
         {
-            var userLogin = new UserLogin { Username=username,Password=password};
-            var user = Authenticate(userLogin);
-            if (user != null)
+            if (username == "Master") // Sprawdź, czy dane logowania są dla użytkownika "Master"
             {
-                var token = GenerateToken(user);
+                var user = new UserLogin { Username = username, Password=password };
 
-                {
-                    var zm = db.Narty.ToList();
-                    var zm1 = db.ButyNarciarskiee.ToList();
-                    var zm2 = db.Clients.ToList();
-                    var zm3 = db.Rezerwacje.ToList();
-                    ViewBag.Narty = zm;
-                    ViewBag.Buty = zm1;
-                    ViewBag.Client = zm2;
-                    ViewBag.Rezerw = zm3;
-                    ViewBag.Token = token;
-                    ViewBag.User = username;
-                    ViewData["Layout"] = "_Layout";
-                    var usserr = db.Clients.FirstOrDefault(e => e.Username == username);
+               // var token = GenerateToken(Authenticate(user));
 
-
-                    var lista = db.Rezerwacje.Where(e => e.IDClient == usserr.IDClient).ToList();
-
-                    ViewBag.Lists = lista;
-
-               
-
-
-                    return View();
-                }
+                ViewBag.Client = db.Clients.ToList();
+                ViewBag.Rezerwacje = db.Clients.Where(klient => db.Rezerwacje.Any(rezerwacja => rezerwacja.IDClient == klient.IDClient)).ToList();
+                
+                return View("~/Login/Master");
             }
             else
             {
-                return NotFound("user not found");
+                var userLogin = new UserLogin { Username = username, Password = password };
+                var user = Authenticate(userLogin);
+                userrr = username;
+                if (user != null)
+                {
+                    var token = GenerateToken(user);
+                    tokenn = token;
+
+                    {
+                        ViewBag.Narty = db.Narty.ToList();
+                        ViewBag.Buty = db.ButyNarciarskiee.ToList();
+                      
+                        ViewBag.Rezerw = db.Rezerwacje.ToList();
+                        ViewBag.Token = token;
+                        ViewBag.User = username;
+                        ViewData["Layout"] = "_Layout";
+                        var usserr = db.Clients.FirstOrDefault(e => e.Username == username);
+
+
+                        var lista = db.Rezerwacje.Where(e => e.IDClient == usserr.IDClient).ToList();
+
+
+                        ViewBag.Lists = lista;
+
+
+
+
+                        return View();
+                    }
+                }
+                else
+                {
+                    return NotFound("user not found");
+                }
             }
         }
 
@@ -68,21 +88,26 @@ namespace nartyy.Controllers
         [Route("Register")]
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Register(string username, string password, string imie, string nazwisko, string adres)
+        public IActionResult Register(string username, string password, string imie, string nazwisko, string adres,string rola)
         {
-            var userReg = new Client { Username = username, Password = password, Imie = imie, Nazwisko = nazwisko, Adress = adres,Roles="Admin" };
+            Client userReg;
+            if (rola == null)
+            {
+                userReg = new Client { Username = username, Password = password, Imie = imie, Nazwisko = nazwisko, Adress = adres, Roles = "Admin" };
+            }
+            else
+            {
+                userReg = new Client { Username = username, Password = password, Imie = imie, Nazwisko = nazwisko, Adress = adres, Roles = rola };
+            }
+
             db.Clients.Add(userReg);
-         
-                db.SaveChanges();
+
+            db.SaveChanges();
             ViewData["Layout"] = "_Layout";
             return View("~/Views/Home/LogOn.cshtml");
-            
-            //catch
-            //{
-            //    return NotFound("user not found");
-            //}
+
         }
-        
+
 
 
         // To generate token
@@ -109,9 +134,8 @@ namespace nartyy.Controllers
         //To authenticate user
         private UserModel Authenticate(UserLogin userLogin)
         {
-            //var currentUser = UserConstants.Users.FirstOrDefault(x => x.Username.ToLower() ==
-            //    userLogin.Username.ToLower() && x.Password == userLogin.Password);
-            var currusers = db.Clients.ToList().FirstOrDefault(x=>x.Username.ToLower()==userLogin.Username && x.Password==userLogin.Password);
+
+            var currusers = db.Clients.ToList().FirstOrDefault(x => x.Username.ToLower() == userLogin.Username && x.Password == userLogin.Password);
             if (currusers != null)
             {
                 var currrr = new UserModel { Username = currusers.Username, Password = currusers.Password, Roles = currusers.Roles };
