@@ -7,8 +7,12 @@ using EntityState = System.Data.Entity.EntityState;
 using Microsoft.AspNetCore.Cors;
 //using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Authorization;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using nartyy.Migrations;
+using System.Net.Mail;
+using System.Net;
+
 
 namespace nartyy.Controllers
 {
@@ -47,12 +51,14 @@ namespace nartyy.Controllers
             ViewData["Layout"] = "_Layout";
             return View();
         }
+
         [Route("Contact")]
         public IActionResult Contact()
         {
             ViewData["Layout"] = "_Layout";
-            return View();
+            return View(new Contact());
         }
+
         [Route("Company")]
         public IActionResult Company()
         {
@@ -157,10 +163,53 @@ namespace nartyy.Controllers
                 return RedirectToAction("Index");
             }
         }
+        [HttpPost]
+        public ActionResult SendEmail(Contact model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Konfiguracja informacji o serwerze SMTP
+                var smtpHost = "smtp.example.com";
+                var smtpPort = 587;
+                var smtpUsername = "your-username";
+                var smtpPassword = "your-password";
+
+                // Tworzenie wiadomości e-mail
+                var message = new MailMessage();
+                message.From = new MailAddress(model.Email);
+                message.To.Add("your-email@example.com");
+                message.Subject = "Nowa wiadomość z formularza kontaktowego";
+                message.Body = $"Od: {model.Name}\nTelefon: {model.Phone}\nPytanie: {model.Message}";
+
+                // Konfiguracja klienta SMTP
+                var smtpClient = new SmtpClient(smtpHost, smtpPort);
+                smtpClient.EnableSsl = true;
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+
+                try
+                {
+                    // Wysyłanie wiadomości e-mail
+                    smtpClient.Send(message);
+
+                    ViewBag.Message = "Wiadomość została wysłana.";
+                }
+                catch (SmtpException ex)
+                {
+                    // Obsługa błędu wysyłania wiadomości e-mail
+                    ViewBag.ErrorMessage = "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
+                }
+            }
+
+            // Powrót do widoku kontaktu
+            return View("Contact", model);
+        }
 
 
 
-    public IActionResult Privacy()
+
+
+        public IActionResult Privacy()
         {
             return View();
         }

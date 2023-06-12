@@ -36,22 +36,33 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication(); // NOTE: line is newly added
-app.UseStaticFiles();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseStaticFiles();
 
-app.MapControllerRoute(
-    name: "Login",
-    pattern: "{controller=Login}/{action=Loginnn}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "Login",
+        pattern: "Login/Loginnn/{id?}",
+        defaults: new { controller = "Login", action = "Loginnn" });
 
-app.MapControllerRoute(
-    name: "Rezerwacja",
-    pattern: "{controller=Home}/{action=Rezerwacja}");
+    endpoints.MapControllerRoute(
+        name: "Rezerwacja",
+        pattern: "Home/Rezerwacja",
+        defaults: new { controller = "Home", action = "Rezerwacja" });
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapControllerRoute(
+        name: "MyForm",
+        pattern: "{controller=Home}/{action=SendEmail}/{id?}");
+});
+
 
 
 
