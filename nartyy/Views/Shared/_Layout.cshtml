@@ -67,7 +67,6 @@
             <br />
         </div>
     </div>
-    </div>
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -99,6 +98,23 @@
     <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("header");
+
+            // Ukrywanie headera przed opuszczeniem strony
+            window.addEventListener("beforeunload", function () {
+                if (header) {
+                    header.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    </script>
+
+
 </body>
 </html>
 
