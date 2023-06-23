@@ -7,7 +7,14 @@ h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, sma
 p, .lead {
 	font-family: 'Raleway', sans-serif;
 }
+.change-color-button {
+    transition: background-color 0.3s;
+}
 
+    .change-color-button:hover {
+        background-color: red; /* Tutaj mo¿esz ustawiæ dowolny kolor t³a po najechaniu */
+        color: white; /* Tutaj mo¿esz ustawiæ dowolny kolor tekstu po najechaniu */
+    }
 h1 {
     font-size: 55px;
     line-height: 55px;

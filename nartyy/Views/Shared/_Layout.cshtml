@@ -24,20 +24,38 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <a href="@Url.Action("Index", "Home")"><img src="img/logo.svg" alt="Logo"></a>
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
             </div>
             <div class="col-xs-6 signin text-right navbar-nav">
                 <div class="col-xs-3">
-                    <a href="@Url.Action("Company")"><button><i class="fa-solid fa-users-between-lines"></i> O nas</button></a>
+                    <a href="@Url.Action("Company")">
+                        <button class="change-color-button">
+                            <i class="fa-solid fa-users-between-lines"></i> O nas
+                        </button>
+                    </a>
                 </div>
                 <div class="col-xs-3">
-                    <a href="@Url.Action("Cash")"><button><i class="fa-solid fa-money-bill"></i> Cennik</button></a>
+                    <a href="@Url.Action("Cash")">
+                        <button class="change-color-button">
+                            <i class="fa-solid fa-money-bill"></i> Cennik
+                        </button>
+                    </a>
                 </div>
                 <div class="col-xs-3">
-                    <a href="@Url.Action("Contact")"><button><i class="fa-solid fa-phone"></i> Kontakt</button></a>
+                    <a href="@Url.Action("Contact")">
+                        <button class="change-color-button">
+                            <i class="fa-solid fa-phone"></i> Kontakt
+                        </button>
+                    </a>
                 </div>
                 <div class="col-xs-3">
-                    <a href="@Url.Action("LogOn")"><button><i class="fa-regular fa-user"></i> Zaloguj się</button></a>
+                    <a href="@Url.Action("LogOn")">
+                        <button class="change-color-button">
+                            <i class="fa-regular fa-user"></i> Zaloguj się
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -79,17 +97,15 @@
             <div class="row">
                 <div class="col-sm-8 margin-20">
                     <ul class="list-inline social">
-                        <li>Kontakt z nami</li>
-                        <li><a href="www.twitter.com"><i class="fa-brands fa-square-twitter"></i></a></li>
-                        <li><a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li style="color: grey;">Kontakt z nami</li>
+                        <li><a href="www.twitter.com"><i class="fa-brands fa-square-twitter" style="color: grey;"></i></a></li>
+                        <li><a href="www.facebook.com"><i class="fa-brands fa-facebook" style="color: grey;"></i></a></li>
+                        <li><a href="www.instagram.com"><i class="fa-brands fa-square-instagram" style="color: grey;"></i></a></li>
                     </ul>
-                </div>
-                <div class="col-sm-4 text-right">
-                    <p><small>&copy; 2023. All rights reserved. Created by ATH</small></p>
                 </div>
             </div>
         </div>
+
     </footer>
 
     <!-- Javascript -->

@@ -11661,19 +11661,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ghaus\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\P-ZPP\\nartyy\\nartyy.csproj",
       "projectName": "nartyy",
-      "projectPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\nartyy.csproj",
-      "packagesPath": "C:\\Users\\ghaus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ghaus\\Source\\Repos\\P-ZPP\\nartyy\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\P-ZPP\\nartyy\\nartyy.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\P-ZPP\\nartyy\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ghaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11681,6 +11686,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11755,7 +11761,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
