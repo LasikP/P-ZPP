@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7g2QCjWE+W0YCsqkeU0jLsiw3EGH/+Ag0+MZj9IcupYpKAvs8ChOD+JXGKmpiqZimJ6qftzwiHYO/9/Lj3Jo9g==",
+  "dgSpecHash": "bi2XNR8A23vYH00fJXKtXqebxDfORWUVXSZkzN9fSGdLBq362Cof2s+f2iPNgamFGDq4qpY/daBxHlb2vziN1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\P-ZPP\\nartyy\\nartyy.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Nowy folder (5)\\nartyy\\nartyy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
