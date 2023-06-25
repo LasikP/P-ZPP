@@ -1,6 +1,14 @@
 ﻿@{
     Layout = (string)ViewData["Layout"];
 }
+<script>
+    window.addEventListener('DOMContentLoaded', scrollToBottom);
+
+    function scrollToBottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
 <div class="container" class="justify-content-center">
     <div><h1>Zadaj nam pytanie!</h1></div>
     <br />

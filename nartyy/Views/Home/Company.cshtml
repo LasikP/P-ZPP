@@ -2,7 +2,13 @@
     Layout = (string)ViewData["Layout"];
 }
 
+<script>
+    window.addEventListener('DOMContentLoaded', scrollToBottom);
 
+    function scrollToBottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
 
     <div class="container">
         <div class="about-section">
