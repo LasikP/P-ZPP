@@ -56,37 +56,47 @@
     </div>
         
     <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6">
-            <a href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
-          </div>
-          <div class="col-xs-6 signin text-right navbar-nav">
-                    <div class="col-xs-8 signin text-right navbar-nav">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <a href="@Url.Action("Company")">
-                                    <button class="btn btn-primary"><i class="fa-solid fa-users-between-lines"></i> O nas</button>
-                                </a>
-                            </div>
-                            <div class="col-xs-4">
-                                <a href="@Url.Action("Cash")">
-                                    <button class="btn btn-primary"><i class="fa-solid fa-money-bill"></i> Cennik</button>
-                                </a>
-                            </div>
-                            <div class="col-xs-4">
-                                <a href="@Url.Action("Contact")">
-                                    <button class="btn btn-primary"><i class="fa-solid fa-phone"></i> Kontakt</button>
-                                </a>
-                            </div>
-                            <div class="col-xs-4">
-                                <a href="@Url.Action("LogOn")">
-                                    <button class="btn btn-primary"><i class="fa-regular fa-user"></i> Zaloguj się</button>
-                                </a>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="col-xs-6 signin text-right navbar-nav">
+                    <div class="col-xs-3">
+                        <a href="@Url.Action("Company")">
+                            <button class="change-color-button btn btn-primary">
+                                <i class="fa-solid fa-users-between-lines"></i> O nas
+                            </button>
+                        </a>
                     </div>
+                    <div class="col-xs-3">
+                        <a href="@Url.Action("Cash")">
+                            <button class="change-color-button btn btn-primary">
+                                <i class="fa-solid fa-money-bill"></i> Cennik
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="@Url.Action("Contact")">
+                            <button class="change-color-button btn btn-primary">
+                                <i class="fa-solid fa-phone"></i> Kontakt
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="@Url.Action("LogOn")">
+                            <button class="change-color-button btn btn-primary">
+                                <i class="fa-regular fa-user"></i> Zaloguj się
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        
         
         <div class="row header-info">
           <div class="col-sm-10 col-sm-offset-1 text-center">
