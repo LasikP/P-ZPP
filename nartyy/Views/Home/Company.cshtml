@@ -3,10 +3,13 @@
 }
 
 <script>
-    window.addEventListener('DOMContentLoaded', scrollToBottom);
+    window.addEventListener('DOMContentLoaded', scrollToSection);
 
-    function scrollToBottom() {
-        window.scrollTo(0, document.body.scrollHeight);
+    function scrollToSection() {
+        var aboutSection = document.querySelector(".about-section");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 </script>
 

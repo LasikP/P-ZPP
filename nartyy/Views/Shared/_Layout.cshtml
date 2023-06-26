@@ -41,20 +41,27 @@
 
 <body>
 
-    
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="logo" href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="@Url.Action("Index", "Home")"><img src="~/img/logo.svg" alt="Logo"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Company")">O nas</a></li>
+                    <li><a href="@Url.Action("Cash")">Cennik</a></li>
+                    <li><a href="@Url.Action("Contact")">Kontakt</a></li>
+                    <li><a href="@Url.Action("LogOn")">Zaloguj się</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
-        
+
     <header>
         <div class="container">
             <div class="row">
@@ -95,6 +102,7 @@
                 </div>
             </div>
         </div>
+    </header>
 
         
         

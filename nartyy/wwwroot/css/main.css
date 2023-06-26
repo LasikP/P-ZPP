@@ -284,7 +284,16 @@ a:hover, a:focus {
 	margin-top: 6px;
 }
 
+.btn-outline-dark {
+    border: 2px solid #70cbce;
+    color: #70cbce;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
 
+    .btn-outline-dark:hover {
+        background-color: #70cbce;
+        color: #fff;
+    }
 
 /* ==========================================================================
    Main styles
